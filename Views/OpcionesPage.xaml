@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSanJuan2025.Views.OpcionesPage"
+             Title="Palabras del Alcalde"
+             BackgroundImageSource="saludo_alcalde.png">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label 
+                   FontSize="24"
+                   HorizontalTextAlignment="Center"
+                   TextColor="DarkRed" />
+
+            
+
+            <Button x:Name="btnNovenario"  
+                    Text="Novenario" 
+                    FontSize="18"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    HorizontalOptions="Fill"
+                    Clicked="btnNovenario_Clicked"/>
+            <Button x:Name="btnActividades"
+                    Text="Actividades"
+                    FontSize="18"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    HorizontalOptions="Fill"
+                    Clicked="btnActividades_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:vm="clr-namespace:AppSanJuan2025.ViewModel"
+             x:Class="AppSanJuan2025.Views.Actividades.Actividades"
+             Title="Actividades">
+    <ContentPage.BindingContext>
+        <vm:ActividadesViewModel/>
+    </ContentPage.BindingContext>
+
+    <CollectionView ItemsSource="{Binding Actividades}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Border Grid.Column="2"
+                        BackgroundColor="#EFEAFF"
+                        Padding="5"
+                       VerticalOptions="Center">
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Icon}" FontSize="28" />
+                        <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="16" />
+                        <Label Text="{Binding Description}" FontSize="14" />
+                        <Label Text="{Binding Date}" HorizontalOptions="End" TextColor="Purple" FontSize="12" />
+                    </VerticalStackLayout>
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
